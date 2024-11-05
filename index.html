@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Not-Balatro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <h1>Not-Balatro</h1>
+    <div class="game-container">
+        <div id="player-hand"></div>
+        <div class="controls">
+            <button id="deal">Deal New Hand</button>
+            <button id="draw">Discard</button>
+            <button id="evaluate">Play Hand</button>
+            <button id="sort">Sort Current Hand</button>
+        </div>
+        <div id="remaining-deck-cards"></div>
+        <div id="play-hand-size"></div>
+        <div id="redraws-available"></div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <footer>
+        Fork this project on <a href="https://github.com/Kartones/not-balatro" target="_blank">GitHub</a>.
+    </footer>
+
+    <script type="module">
+        import { Game } from './js/game.js';
+
+        window.game = new Game();
+
+        console.log(
+          "To hack, do it via `game.gameRules.xxx` ror game.cheat(), and deal a new hand after your changes."
+        );
+      </script>
+</body>
+</html>

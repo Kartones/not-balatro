@@ -1,0 +1,85 @@
+:root {
+  --card-width: 142px;
+  --card-height: 190px;
+}
+
+img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+
+  object-fit: none;
+  object-position: 0 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #4C7450;
+  color: white;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+a {
+  color: #aaffaa;
+}
+
+.controls {
+  margin: 20px 0;
+}
+button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.message {
+  margin: 20px 0;
+  font-size: 18px;
+}
+.instructions {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #aaffaa;
+}
+
+.game-container {
+  margin-top: 20px;
+}
+
+.card-container {
+  display: inline-block;
+  margin: 5px;
+}
+
+.card-base {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  background-repeat: no-repeat;
+}
+.card-background {
+  background-image: url('../img/card_background.png');
+  background-position: 0 0;
+  top: 0;
+  left: 0;
+}
+.card-background.selected {
+  transform: translateY(-10px);
+  background-color: #59A5D5;
+  box-shadow: 0 0 5px 3px #59A5D5;
+}

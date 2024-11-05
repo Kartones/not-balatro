@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+
+tmp
+# for this project, no need to have the lockfile committed
+# if anything happens related with dependencies, it would only affect local development
+pnpm-lock.yaml
