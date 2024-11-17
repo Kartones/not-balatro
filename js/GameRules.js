@@ -51,7 +51,7 @@ export class GameRules {
 
   isFlush(sortedCards, cardFrequencies) {
     const matches =
-      sortedCards.length >= DEFAULT_HAND_SIZE &&
+      sortedCards.length === this.playHandSize &&
       sortedCards.every((card) => card.suit === sortedCards[0].suit);
 
     if (!matches) {
@@ -67,7 +67,7 @@ export class GameRules {
 
   isStraight(sortedCards, cardFrequencies) {
     const matches =
-      sortedCards.length >= DEFAULT_HAND_SIZE &&
+      sortedCards.length === this.playHandSize &&
       sortedCards.every((card, i) => {
         if (i === 0) return true;
         return card.rank === sortedCards[i - 1].rank - 1;
@@ -85,12 +85,14 @@ export class GameRules {
   }
 
   isFullHouse(sortedCards, cardFrequencies) {
-    // base case: 3 & 2
-    // TODO: properly calculate based on DEFAULT_HAND_SIZE
+    const evenPlayHandSize = this.playHandSize % 2 === 0;
+
+    // base case: 3 & 2, but for even play hand sizes, 3 & 3 and so on
     const matches =
-      cardFrequencies[0] >= 3 &&
-      cardFrequencies[1] >= 2 &&
-      cardFrequencies[0] === cardFrequencies[1] + 1;
+      cardFrequencies[0] >= Math.ceil(this.playHandSize / 2) &&
+      cardFrequencies[1] >= Math.floor(this.playHandSize / 2) &&
+      cardFrequencies[0] ===
+        (evenPlayHandSize ? cardFrequencies[1] : cardFrequencies[1] + 1);
 
     const value = cardFrequencies[0] + cardFrequencies[1];
 
@@ -135,6 +137,7 @@ export class GameRules {
     return new HandRank(isTwoPairs || isPair, rank, isTwoPairs ? 2 : 1);
   }
 
+  // TODO: check if ranking is correctly calculated (other than the current naive sum of card ranks)
   _calculateRank(sortedCards, cardFrequencies, n) {
     let rank = 0;
     for (let i = 0; i < n; i++) {
