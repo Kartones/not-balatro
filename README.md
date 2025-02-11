@@ -47,8 +47,9 @@ node --test
 
 ## Roadmap
 
-- (WIP) Flexible scoring rules: As the number of played cards is hackable, scoring rules can become way complex (e.g. allow for "N of a kind", for an arbitrary N). The system should allow flexibility for up to 10 cards or so.
 - (WIP) More tests at minimum for the full game rules and played hand evaluation.
+- Setup GH Actions to run the tests
+- (WIP) Flexible scoring rules: As the number of played cards is hackable, scoring rules can become way complex (e.g. allow for "N of a kind", for an arbitrary N). The system should allow flexibility for up to 10 cards or so.
 - Show scored value of played hand.
 - Hack panel: Instead of relying on the browser developer tools console, provide an easy way to hack all available parameters.
 - Code refactor: [Claude 3.5](https://claude.ai/) gives you a great wow-effect when it first generates a fully working poker game prototype, but the code quality isn't that great. In any case, I'm up for the challenge of refactoring AI-generated "game code".

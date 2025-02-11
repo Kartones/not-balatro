@@ -4,6 +4,8 @@ import { Card } from "./Card.js";
 const DEFAULT_HAND_SIZE = 5;
 const DEFAULT_REDRAWS = 1;
 
+// TODO: consider adding a flag to rank based on the original hand size (5) but playing with a bigger hand size (e.g. 7)
+
 export class GameRules {
   handSize;
   playHandSize;
