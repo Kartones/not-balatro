@@ -1,10 +1,9 @@
-# See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
 # See: https://circleci.com/docs/orb-intro/
 orbs:
   # See: https://circleci.com/developer/orbs/orb/circleci/node
-  node: circleci/node@5.2
+  node: circleci/node@7.1.0
 
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
@@ -12,6 +11,5 @@ workflows:
     jobs:
       - node/test:
           # https://circleci.com/developer/images/image/cimg/node
-          version: '22.14'
-          pkg-manager: npm
-
+          executor: node/default
+          pkg-manager: pnpm
