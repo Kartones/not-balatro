@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/Kartones/flask-calendar/tree/master.svg?style=svg)](https://circleci.com/gh/Kartones/not-balatro/tree/master)
+
 # Not-Balatro
 
 I really like [Balatro](https://www.playbalatro.com/)'s main idea of picking Poker and breaking [almost all] its rules, in a fun and addictive way, so I thought that it would be a nice exercise to replicate it: Start by building a basic poker game, then rework the internals so most rules can be altered.
