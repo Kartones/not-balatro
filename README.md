@@ -45,6 +45,12 @@ Tests written and run using NodeJS [built-in test runner](https://nodejs.org/doc
 node --test
 ```
 
+or
+
+```bash
+pnpm test
+```
+
 ## Roadmap
 
 - (WIP) More tests at minimum for the full game rules and played hand evaluation.
