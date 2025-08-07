@@ -1,9 +1,9 @@
 {
   "type": "module",
   "engines": {
-    "node": "22.17.1"
+    "node": "22.18.0"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "http-server": "^14.1.1"
   },
