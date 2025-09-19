@@ -3,7 +3,7 @@ version: 2.1
 # See: https://circleci.com/docs/orb-intro/
 orbs:
   # See: https://circleci.com/developer/orbs/orb/circleci/node
-  node: circleci/node@7.1.1
+  node: circleci/node@7.2.0
 
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
 workflows:
